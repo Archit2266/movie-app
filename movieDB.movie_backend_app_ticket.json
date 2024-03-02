@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "65e2c29ec1a699aec547f8d1"
+  },
+  "id": 1,
+  "user_id": 3,
+  "theater_id": 3,
+  "total_price": 480,
+  "seats": "A1,A4,A7,A8"
+},
+{
+  "_id": {
+    "$oid": "65e2c2e2c1a699aec547f8d2"
+  },
+  "id": 2,
+  "user_id": 3,
+  "theater_id": 3,
+  "total_price": 480,
+  "seats": "A1,A4,A7,A8"
+},
+{
+  "_id": {
+    "$oid": "65e2c5fec1a699aec547f8d3"
+  },
+  "id": 3,
+  "user_id": 3,
+  "theater_id": 1,
+  "total_price": 240,
+  "seats": "B5,B3"
+}]

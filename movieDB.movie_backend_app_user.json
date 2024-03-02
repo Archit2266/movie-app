@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "65e1ce83165eb4340c743c42"
+  },
+  "id": 1,
+  "last_login": {
+    "$date": "2024-03-01T12:48:44.384Z"
+  },
+  "name": "",
+  "email": "",
+  "password": "pbkdf2_sha256$320000$Dv9AAD2hWNjOGlFDzzG2FO$/TSh74MxoZAD/bs3zwmj8aVH4cRN1v5l5nORnv9oDMY=",
+  "mobile": null,
+  "username": "admin",
+  "is_active": true,
+  "is_staff": true,
+  "is_superuser": true
+},
+{
+  "_id": {
+    "$oid": "65e2af5f4a495fc72bd2fb7a"
+  },
+  "id": 3,
+  "last_login": null,
+  "name": "test1",
+  "email": "test1@gmail.com",
+  "password": "pbkdf2_sha256$320000$U1fIjzXSmS7BXmRcdMrA4C$9OGPK/e+OZKtzGjxrE7z1dg2thamMEA1DfGTtOTN2OU=",
+  "mobile": null,
+  "username": "test123",
+  "is_active": true,
+  "is_staff": false,
+  "is_superuser": false
+}]

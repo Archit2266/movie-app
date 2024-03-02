@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "65e2befd4a495fc72bd2fb7b"
+  },
+  "id": 1,
+  "movie_id": 2,
+  "name": "admin",
+  "city": "balaghat",
+  "pincode": "555555",
+  "movie_timing": null,
+  "available_seats": 45
+},
+{
+  "_id": {
+    "$oid": "65e2c00a4a495fc72bd2fb7c"
+  },
+  "id": 2,
+  "movie_id": 5,
+  "name": "miraj",
+  "city": "balaghat",
+  "pincode": "421306",
+  "movie_timing": null,
+  "available_seats": 45
+},
+{
+  "_id": {
+    "$oid": "65e2c0c9c1a699aec547f8ce"
+  },
+  "id": 3,
+  "movie_id": 1,
+  "name": "PVR",
+  "city": "delhi",
+  "pincode": "123456",
+  "movie_timing": null,
+  "available_seats": 45
+},
+{
+  "_id": {
+    "$oid": "65e2c0e6c1a699aec547f8cf"
+  },
+  "id": 4,
+  "movie_id": 4,
+  "name": "PVR",
+  "city": "nagpur",
+  "pincode": "111111",
+  "movie_timing": null,
+  "available_seats": 45
+},
+{
+  "_id": {
+    "$oid": "65e2c111c1a699aec547f8d0"
+  },
+  "id": 5,
+  "movie_id": 7,
+  "name": "Multiplex",
+  "city": "banglore",
+  "pincode": "222222",
+  "movie_timing": null,
+  "available_seats": 45
+}]
