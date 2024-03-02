@@ -1,0 +1,15 @@
+.container {
+    margin-top: 3%;
+    width: 550px;
+    padding: 2.5%;
+
+
+    background-color: rgb(90, 5, 136);
+    border-radius: 3%;
+    box-shadow: 0px 0px 29.4px 0.6px rgb(205, 203, 214);
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    color: aliceblue;
+}

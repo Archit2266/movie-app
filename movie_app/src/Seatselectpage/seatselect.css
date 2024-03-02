@@ -1,0 +1,103 @@
+.row {
+    display: inline-table;
+    padding: 0.5%;
+}
+
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn-selected {
+    background-color: rgb(93, 93, 253);
+}
+
+
+.book-btn {
+
+    background-color: #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+
+    margin: 2px;
+
+
+}
+
+.btn-row {
+    margin-left: 80px;
+}
+
+.container {
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+.THEATERNAME {
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.ticketprice {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    outline: 1px grey solid;
+
+}
+
+
+
+.book-btn {
+    margin-top: 30px;
+
+    color: rgb(83, 83, 136);
+    font-size: larger;
+    background-color: rgb(192, 240, 255);
+    border-color: black;
+}
+
+.hrline {
+
+
+    background-color: rgb(114, 161, 219);
+
+
+}
+
+hr.style-seven {
+    height: 50px;
+
+    border-radius: 130px 130px 0px 0px;
+
+}
+
+.response-container {
+    outline: 1px solid black;
+    background-color: rgb(222, 232, 246);
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.response-para {
+    font-weight: 500;
+    font-size: larger;
+    color: black;
+
+}
+
+h2 {
+    color: rgb(43, 4, 47);
+}
+
+h3,
+p {
+    color: rgb(43, 4, 47);
+}
