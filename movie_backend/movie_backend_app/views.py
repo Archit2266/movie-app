@@ -101,8 +101,7 @@ class TheaterView(APIView):
         theatername = request.GET.get("theatername", None)
         if movie_id:
             avaiable_theaters = Theater.objects.filter(movie__id=movie_id).values()
-            # serializer=TheaterSerializer(avaiable_theaters,many=True).data
-            # return Response(avaiable_theaters,status=200)
+
         elif theatername:
             avaiable_theaters = Theater.objects.filter(
                 theater_name=theatername

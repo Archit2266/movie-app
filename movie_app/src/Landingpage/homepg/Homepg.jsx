@@ -28,10 +28,10 @@ export default function Homepage() {
                     <Banner />
                 </div>
                 {/* <DropdownBar/> */}
-                <div className="row">
+                <div className={`${styles.moviesSection}`}>
                     {
                         movies.map(m =>
-                            <div key={m.id} className="col-md-3">
+                            <div key={m.id} className={`row ${styles.moviecards} text-center`}>
                                 <Link to={`/movie/${m.id}`}>
                                     <MovieCard key={m.id} movie={m} />
                                 </Link>

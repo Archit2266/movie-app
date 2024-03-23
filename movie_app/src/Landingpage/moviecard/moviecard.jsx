@@ -12,7 +12,7 @@ export default function MovieCard({ movie }) {
 
 
     return (
-        <div className={styles.card}>
+        <div className={styles.movieCard}>
 
             <Card title={movie.title} header={header} className="md:w-25rem">
                 <div className='content'>
