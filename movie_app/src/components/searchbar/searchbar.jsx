@@ -7,48 +7,49 @@ import MovieCard from "../../Landingpage/moviecard/moviecard";
 import Navbar from "../Navbar/Menubar";
 
 export default function DropdownBar() {
-    const [selectedLanguage, setSelectedLanguage] = useState({});
-    const [selectedGenre, setSelectedGenre] = useState({});
-    const [selectedRating, setSelectedRating] = useState({});
-    const namevalue = selectedGenre["name"];
-    console.log(namevalue);
-    const defaultvalue = "";
-
-    const genre = [
-        { name: "", code: "ac" },
-        { name: "Action", code: "ac" },
-        { name: "Crime", code: "RM" },
-        { name: "Comedy", code: "LDN" },
-        { name: "Family", code: "IST" },
-        { name: "Biography", code: "PRS" },
-    ];
-    const Language = [
-        { name: "", code: "ac" },
-        { name: "Hindi", code: "NY" },
-        { name: "English", code: "RM" },
-        { name: "Marathi", code: "LDN" },
-        { name: "Tamil", code: "IST" },
-        { name: "Kannad", code: "PRS" },
-    ];
-    const rating = [
-        { name: "", code: "ac" },
-        { name: "A", code: "NY" },
-        { name: "U", code: "RM" },
-        { name: "UA", code: "LDN" },
-    ];
-    const [movies, setmovies] = useState([]);
-    console.log(movies);
+    const [selectedLanguage, setSelectedLanguage] = useState("");
+    const [selectedGenre, setSelectedGenre] = useState("");
+    const [selectedRating, setSelectedRating] = useState("");
+    const [movies, setMovies] = useState([]);
 
     useEffect(() => {
         axios
             .get(
-                `http://127.0.0.1:8000/api/movies/?genre=${selectedGenre["name"]}&language=${selectedLanguage["name"]}&altrating=${selectedRating["name"]}`
+                `http://127.0.0.1:8000/api/movies/?genre=${selectedGenre}&language=${selectedLanguage}&altrating=${selectedRating}`
             )
             .then((response) => {
                 console.log(response);
-                setmovies(response.data);
+                setMovies(response.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching movies:", error);
             });
     }, [selectedLanguage, selectedGenre, selectedRating]);
+
+    const genreOptions = [
+        { label: "Select a Genre", value: "" },
+        { label: "Action", value: "Action" },
+        { label: "Crime", value: "Crime" },
+        { label: "Comedy", value: "Comedy" },
+        { label: "Family", value: "Family" },
+        { label: "Biography", value: "Biography" }
+    ];
+
+    const languageOptions = [
+        { label: "Select a Language", value: "" },
+        { label: "Hindi", value: "Hindi" },
+        { label: "English", value: "English" },
+        { label: "Marathi", value: "Marathi" },
+        { label: "Tamil", value: "Tamil" },
+        { label: "Kannad", value: "Kannad" }
+    ];
+
+    const ratingOptions = [
+        { label: "Select a Rating", value: "" },
+        { label: "A", value: "A" },
+        { label: "U", value: "U" },
+        { label: "UA", value: "UA" }
+    ];
 
     return (
         <>
@@ -57,46 +58,34 @@ export default function DropdownBar() {
                 <div className={styles.tabb}>
                     <span className="p-float-label">
                         <Dropdown
-                            inputId="dd-genre"
                             value={selectedGenre}
+                            options={genreOptions}
                             onChange={(e) => setSelectedGenre(e.value)}
-                            options={genre}
-                            defaultValue={defaultvalue}
-                            optionLabel="name"
-                            // showClear
                             className={styles.boxx}
                         />
-                        <label htmlFor="dd-genre">Select a Genre</label>
                     </span>
 
                     <span className="p-float-label">
                         <Dropdown
-                            inputId="dd-lang"
                             value={selectedLanguage}
+                            options={languageOptions}
                             onChange={(e) => setSelectedLanguage(e.value)}
-                            options={Language}
-                            optionLabel="name"
                             className={styles.boxx}
                         />
-                        <label htmlFor="dd-lang">Select a Language</label>
                     </span>
 
                     <span className="p-float-label">
                         <Dropdown
-                            inputId="dd-alt-rate"
                             value={selectedRating}
+                            options={ratingOptions}
                             onChange={(e) => setSelectedRating(e.value)}
-                            options={rating}
-                            optionLabel="name"
-                            // showClear
                             className={styles.boxx}
                         />
-                        <label htmlFor="dd-rate">Select a Rating</label>
                     </span>
                 </div>
-                <div className="row">
+                <div className={`${styles.moviesSection}`}>
                     {movies.map((m) => (
-                        <div key={m.id} className="accordion">
+                        <div key={m.id} className={styles.movieCard}>
                             <Link to={`/movie/${m.id}`}>
                                 <MovieCard key={m.id} movie={m} />
                             </Link>
@@ -107,4 +96,3 @@ export default function DropdownBar() {
         </>
     );
 }
-
